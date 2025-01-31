@@ -1,0 +1,277 @@
+body {
+  background: black;
+}
+
+.swatch {
+  display: block;
+  text-align: center;
+  position: relative;
+  margin: 100px;
+}
+
+.swatch div {
+  width: 70px;
+  height: 225px;
+  position: absolute;
+  top: 0px;
+  border-radius: 5px;
+  border-top: solid 2px rgba(0, 0, 0, 0.2);
+  border-left: solid 3px rgba(255, 255, 255, 0.2);
+  border-bottom: solid 3px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  box-sizing: border-box;
+  transform-origin: center 90%;
+  display: inline-block;
+  backface-visibility: hidden;
+  margin-left: -35px;
+  transform: rotate(0deg);
+}
+
+/* Style and position the pin */
+.swatch .pin {
+  width: 16px;
+  height: 16px;
+  background-color: white;
+  border-radius: 8px;
+  position: absolute;
+  top: 200px;
+  left: 50%;
+  margin-left: -8px;
+  z-index: 10;
+  transform-origin: center center;
+  animation: pin-drop 8s cubic-bezier(0.17, 0.67, 0.2, 1) infinite;
+}
+
+/* Color assignments */
+.swatch div:nth-child(2) {
+  background-color: #9400d3;
+  animation: swatch-violet-motion 8s cubic-bezier(0.17, 0.67, 0.2, 1) infinite;
+}
+
+.swatch div:nth-child(3) {
+  background-color: #4b0082;
+  animation: swatch-indigo-motion 8s cubic-bezier(0.2, 0.62, 0.2, 1) infinite;
+}
+
+.swatch div:nth-child(4) {
+  background-color: blue;
+  animation: swatch-blue-motion 8s cubic-bezier(0.25, 0.57, 0.2, 1) infinite;
+}
+
+.swatch div:nth-child(5) {
+  background-color: green;
+  animation: swatch-green-motion 8s cubic-bezier(0.3, 0.52, 0.2, 1) infinite;
+}
+
+.swatch div:nth-child(6) {
+  background-color: yellow;
+  animation: swatch-yellow-motion 8s cubic-bezier(0.35, 0.47, 0.2, 1) infinite;
+}
+
+.swatch div:nth-child(7) {
+  background-color: orange;
+  animation: swatch-orange-motion 8s cubic-bezier(0.4, 0.45, 0.2, 1) infinite;
+}
+
+.swatch div:nth-child(8) {
+  background-color: red;
+  animation: swatch-red-motion 8s cubic-bezier(0.17, 0.67, 0.2, 1) infinite;
+}
+
+/* Swatch animations */
+@keyframes swatch-violet-motion {
+  0%,
+  10% {
+    transform: rotate(0deg) translateX(0);
+  }
+  30%,
+  40% {
+    transform: rotate(-75deg) translateX(0);
+  }
+  60%,
+  90% {
+    transform: rotate(4deg) translateX(-232px);
+  }
+}
+
+@keyframes swatch-indigo-motion {
+  0%,
+  10% {
+    transform: rotate(0deg) translateX(0);
+  }
+  30%,
+  40% {
+    transform: rotate(-50deg) translateX(0);
+  }
+  60%,
+  90% {
+    transform: rotate(2deg) translateX(-154px);
+  }
+}
+
+@keyframes swatch-blue-motion {
+  0%,
+  10% {
+    transform: rotate(0deg) translateX(0);
+  }
+  30%,
+  40% {
+    transform: rotate(-25deg) translateX(0);
+  }
+  60%,
+  90% {
+    transform: rotate(-3deg) translateX(-74px);
+  }
+}
+
+@keyframes swatch-green-motion {
+  0%,
+  10% {
+    transform: rotate(0deg) translateX(0);
+  }
+  30%,
+  40% {
+    transform: rotate(0deg) translateX(0);
+  }
+  60%,
+  90% {
+    transform: rotate(2deg) translateX(0);
+  }
+}
+
+@keyframes swatch-yellow-motion {
+  0%,
+  10% {
+    transform: rotate(0deg) translateX(0);
+  }
+  30%,
+  40% {
+    transform: rotate(25deg) translateX(0);
+  }
+  60%,
+  90% {
+    transform: rotate(-2deg) translateX(78px);
+  }
+}
+
+@keyframes swatch-orange-motion {
+  0%,
+  10% {
+    transform: rotate(0deg) translateX(0);
+  }
+  30%,
+  40% {
+    transform: rotate(50deg) translateX(0);
+  }
+  60%,
+  90% {
+    transform: rotate(3deg) translateX(151px);
+  }
+}
+
+@keyframes swatch-red-motion {
+  0%,
+  10% {
+    transform: rotate(0deg) translateX(0);
+  }
+  30%,
+  40% {
+    transform: rotate(75deg) translateX(0);
+  }
+  60%,
+  90% {
+    transform: rotate(-1deg) translateX(232px);
+  }
+}
+
+@keyframes pin-drop {
+  0%,
+  38% {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 1;
+    z-index: 10;
+  }
+  /* Initial pop out */
+  39% {
+    transform: translate(0, -3px) rotate(0deg);
+    opacity: 1;
+    z-index: 10;
+  }
+  /* Start falling */
+  40% {
+    transform: translate(6px, 0) rotate(15deg);
+    opacity: 1;
+    z-index: 10;
+  }
+  /* Mid fall with rotation */
+  42% {
+    transform: translate(30px, 37px) rotate(45deg);
+    opacity: 1;
+    z-index: 1;
+  }
+  /* Continue falling with more rotation */
+  44% {
+    transform: translate(42px, 39px) rotate(90deg);
+    opacity: 0.95;
+    width: 12px;
+    height: 12px;
+    z-index: 1;
+  }
+  /* Rolling effect */
+  48% {
+    transform: translate(54px, 41px) rotate(180deg);
+    opacity: 0.9;
+    width: 8px;
+    height: 8px;
+    z-index: 1;
+  }
+  /* Settle and start fading */
+  52% {
+    transform: translate(66px, 41px) rotate(220deg);
+    opacity: 0.7;
+    width: 4px;
+    height: 4px;
+    z-index: 1;
+  }
+  /* Complete fade out */
+  55% {
+    transform: translate(78px, 41px) rotate(220deg);
+    opacity: 0;
+    width: 0;
+    height: 0;
+    z-index: 1;
+  }
+  /* Hidden state */
+  56%,
+  97% {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 0;
+    width: 4px;
+    height: 4px;
+    z-index: 1;
+  }
+  /* Begin reappearing from behind */
+  98% {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 0.3;
+    width: 8px;
+    height: 8px;
+    z-index: 1;
+  }
+  /* Push through effect */
+  99% {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 0.6;
+    width: 12px;
+    height: 12px;
+    z-index: 10;
+  }
+  /* Fully visible */
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 1;
+    width: 16px;
+    height: 16px;
+    z-index: 10;
+  }
+}
