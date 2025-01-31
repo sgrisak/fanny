@@ -193,85 +193,86 @@ body {
   }
   /* Initial pop out */
   39% {
-    transform: translate(0, -3px) rotateX(0deg);
+    transform: translate(-2px, 52px) rotateX(0deg);
     opacity: 1;
     z-index: 10;
   }
-  /* Start falling */
+  /* Bounce */
   40% {
-    transform: translate(6px, 0) rotateX(-35deg);
+    transform: translate(0, 44px) rotateX(-5deg);
     opacity: 1;
     z-index: 10;
+    background-color: #ddd;
   }
-  /* Mid fall with rotation */
+  /* Continue falling */
   42% {
-    transform: translate(30px, 42px) rotateX(-45deg);
+    transform: translate(0, 52px) rotateX(-10deg);
     opacity: 1;
     z-index: 1;
+    background-color: #bbb;
   }
   /* Continue falling with more rotation */
   44% {
-    transform: translate(42px, 64px) rotateX(-75deg);
-    opacity: 0.95;
-    width: 12px;
-    height: 12px;
+    transform: translate(0, 58px) rotateX(-15deg);
+    opacity: 1;
     z-index: 1;
+    background-color: #999;
   }
   /* Rolling effect */
-  48% {
-    transform: translate(54px, 66px) rotateX(-87deg);
-    opacity: 0.9;
-    width: 8px;
-    height: 8px;
+  46% {
+    transform: translate(0, 66px) rotateX(-20deg);
+    opacity: 0.95;
     z-index: 1;
+    background-color: #888;
   }
-  /* Settle and start fading */
-  52% {
-    transform: translate(66px, 66px) rotateX(-89deg);
-    opacity: 0.7;
-    width: 4px;
-    height: 4px;
+  48% {
+    transform: translate(0, 66px) rotateX(-25deg);
+    opacity: 0.95;
     z-index: 1;
+    background-color: #666;
+  }
+  50% {
+    transform: translate(0, 66px) rotateX(-30deg);
+    opacity: 0.95;
+    z-index: 1;
+    background-color: #555;
+  }
+  52% {
+    transform: translate(0, 66px) rotateX(-35deg);
+    opacity: 0.9;
+    z-index: 1;
+    background-color: #444;
   }
   /* Complete fade out */
   55% {
-    transform: translate(78px, 66px) rotateX(-90deg);
-    opacity: 0;
-    width: 0;
-    height: 0;
+    transform: translate(0, 66px) rotateX(-60deg);
+    opacity: 0.6;
     z-index: 1;
+    background-color: #333;
   }
   /* Hidden state */
   56%,
   97% {
-    transform: translate(0, 0) rotateX(0deg);
+    transform: translate(0, 60px) rotateX(-90deg);
     opacity: 0;
-    width: 4px;
-    height: 4px;
     z-index: 1;
   }
   /* Begin reappearing from behind */
   98% {
     transform: translate(0, 0) rotateX(0deg);
     opacity: 0.3;
-    width: 8px;
-    height: 8px;
     z-index: 1;
   }
   /* Push through effect */
   99% {
     transform: translate(0, 0) rotateX(0deg);
     opacity: 0.6;
-    width: 12px;
-    height: 12px;
     z-index: 10;
   }
   /* Fully visible */
   100% {
     transform: translate(0, 0) rotateX(0deg);
     opacity: 1;
-    width: 16px;
-    height: 16px;
     z-index: 10;
   }
 }
