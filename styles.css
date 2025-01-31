@@ -187,31 +187,31 @@ body {
 @keyframes pin-drop {
   0%,
   38% {
-    transform: translate(0, 0) rotate(0deg);
+    transform: translate(0, 0) rotateX(0deg);
     opacity: 1;
     z-index: 10;
   }
   /* Initial pop out */
   39% {
-    transform: translate(0, -3px) rotate(0deg);
+    transform: translate(0, -3px) rotateX(0deg);
     opacity: 1;
     z-index: 10;
   }
   /* Start falling */
   40% {
-    transform: translate(6px, 0) rotate(15deg);
+    transform: translate(6px, 0) rotateX(-35deg);
     opacity: 1;
     z-index: 10;
   }
   /* Mid fall with rotation */
   42% {
-    transform: translate(30px, 37px) rotate(45deg);
+    transform: translate(30px, 42px) rotateX(-45deg);
     opacity: 1;
     z-index: 1;
   }
   /* Continue falling with more rotation */
   44% {
-    transform: translate(42px, 39px) rotate(90deg);
+    transform: translate(42px, 64px) rotateX(-75deg);
     opacity: 0.95;
     width: 12px;
     height: 12px;
@@ -219,7 +219,7 @@ body {
   }
   /* Rolling effect */
   48% {
-    transform: translate(54px, 41px) rotate(180deg);
+    transform: translate(54px, 66px) rotateX(-87deg);
     opacity: 0.9;
     width: 8px;
     height: 8px;
@@ -227,7 +227,7 @@ body {
   }
   /* Settle and start fading */
   52% {
-    transform: translate(66px, 41px) rotate(220deg);
+    transform: translate(66px, 66px) rotateX(-89deg);
     opacity: 0.7;
     width: 4px;
     height: 4px;
@@ -235,7 +235,7 @@ body {
   }
   /* Complete fade out */
   55% {
-    transform: translate(78px, 41px) rotate(220deg);
+    transform: translate(78px, 66px) rotateX(-90deg);
     opacity: 0;
     width: 0;
     height: 0;
@@ -244,7 +244,7 @@ body {
   /* Hidden state */
   56%,
   97% {
-    transform: translate(0, 0) rotate(0deg);
+    transform: translate(0, 0) rotateX(0deg);
     opacity: 0;
     width: 4px;
     height: 4px;
@@ -252,7 +252,7 @@ body {
   }
   /* Begin reappearing from behind */
   98% {
-    transform: translate(0, 0) rotate(0deg);
+    transform: translate(0, 0) rotateX(0deg);
     opacity: 0.3;
     width: 8px;
     height: 8px;
@@ -260,7 +260,7 @@ body {
   }
   /* Push through effect */
   99% {
-    transform: translate(0, 0) rotate(0deg);
+    transform: translate(0, 0) rotateX(0deg);
     opacity: 0.6;
     width: 12px;
     height: 12px;
@@ -268,7 +268,7 @@ body {
   }
   /* Fully visible */
   100% {
-    transform: translate(0, 0) rotate(0deg);
+    transform: translate(0, 0) rotateX(0deg);
     opacity: 1;
     width: 16px;
     height: 16px;
